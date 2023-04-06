@@ -1,7 +1,7 @@
 import csv
+import pandas as pd
 
 
-with open("sales_dataset.csv", "r") as data_file:
-    spreadsheet = csv.DictReader(data_file)
-    for row in spreadsheet:
-        print(row)
+df = pd.read_csv('sales_dataset.csv')
+
+print(df.to_string())
