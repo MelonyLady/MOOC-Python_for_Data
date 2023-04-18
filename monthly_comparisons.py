@@ -42,3 +42,10 @@ plt.xlabel("Month", fontsize=14)
 plt.ylabel("Total Sales", fontsize=14)
 plt.grid(True)
 plt.show()
+
+
+max_sales = df2['Total Sales'].max()
+min_sales = df2['Total Sales'].min()
+
+print()
+print(f"The highest amount of money made in sales was £{max_sales} in Feb and the lowest amount was £{min_sales} in Oct.")
