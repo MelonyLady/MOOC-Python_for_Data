@@ -22,6 +22,7 @@ print(sort_monthly_sales)
 sort_monthly_sales.to_csv('month_comparisons.csv')
 
 
+# colours to be used for charts
 colours = ['#f0a8ef', '#a8b2f0', '#a8f0ca', '#caa8f0', '#eaf0a8', '#f0a8a8', '#92ada1', '#a092ad', '#966083', '#968360',
            '#4d7a48', '#5a487a']
 
@@ -35,7 +36,6 @@ plt.show()
 
 
 # create a bar chart for total sales per month
-
 plt.bar(df2["Month"], df2["Total Sales"], color=colours)
 plt.title("Total Sales per Month", fontsize=16)
 plt.xlabel("Month", fontsize=14)
