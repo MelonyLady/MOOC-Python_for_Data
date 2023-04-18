@@ -6,8 +6,8 @@ df = pd.read_csv('sales_dataset.csv')
 
 
 df['Total Sales'] = df['Quantity Sold'] * df['Sale Price']
-product_sales = df.pivot_table(index=['Product Name'], values=['Quantity Sold', 'Sale Price', 'Total Sales'])
-print(product_sales)
+# product_sales = df.pivot_table(index=['Product Name'], values=['Quantity Sold', 'Sale Price', 'Total Sales'])
+# print(product_sales)
 
 
 plt.bar(df['Product Name'], df['Total Sales'])
@@ -17,3 +17,15 @@ plt.xticks(rotation=90, horizontalalignment="center")
 plt.ylabel('Total Sales', fontsize=14)
 plt.grid(True)
 plt.show()
+
+print()
+print()
+print("Total Sales by Product in descending order")
+print()
+print(df.groupby('Product Name')['Total Sales'].max().reset_index().sort_values(['Total Sales'], ascending=False))
+
+print()
+print()
+print('Average Sale Price per Category')
+print()
+print(df.groupby('Category')['Sale Price'].mean())
