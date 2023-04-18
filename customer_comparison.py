@@ -9,8 +9,6 @@ df['Total Money Spent'] = df['Quantity Sold'] * df['Sale Price']
 
 print("Total Money Spent by Customer in descending order")
 print()
-# THe below function does what the pivot table does
-# df.groupby('Customer Name')['Total Money Spent'].max().reset_index().sort_values(['Total Money Spent'], ascending=False)
 
 # create pivot table that uses 'Total money Spent' and adds them based on customer
 customer_sales = df.pivot_table(index=['Customer Name'], values=['Total Money Spent'], aggfunc='sum')
@@ -31,7 +29,7 @@ colours = ['#f0a8ef', '#a8b2f0', '#a8f0ca', '#caa8f0', '#eaf0a8', '#f0a8a8', '#9
 plt.bar(df2["Customer Name"], df2["Total Money Spent"], color=colours)
 plt.title("Total Customer Spending", fontsize=16)
 plt.xlabel("Customer", fontsize=14)
-plt.ylabel("Total Amount Spent", fontsize=14)
+plt.ylabel("Total Amount Spent (£)", fontsize=14)
 plt.grid(True)
 plt.show()
 
