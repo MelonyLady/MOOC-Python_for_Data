@@ -6,8 +6,8 @@ df = pd.read_csv('sales_dataset.csv')
 
 
 df['Total Sales'] = df['Quantity Sold'] * df['Sale Price']
-# monthly_sales = df.pivot_table(index=['Month', 'Product Name'], values=['Quantity Sold', 'Sale Price', 'Total Sales'])
-# print(monthly_sales)
+monthly_sales = df.pivot_table(index=['Month', 'Product Name'], values=['Quantity Sold', 'Sale Price', 'Total Sales'])
+print(monthly_sales)
 
 plt.bar(df['Month'], df['Total Sales'])
 plt.title('Total Sales per Month', fontsize=14)
