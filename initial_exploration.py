@@ -41,5 +41,5 @@ print(pivot_monthly_sales_p_cust)
 
 print("*********************************************************************************************")
 
-total_sales = df.pivot_table(index=['Category', 'Product Name'], values=['Total_price'], aggfunc='Quantity Sold' * 'Sale Price')
-print(total_sales)
+# total_sales = df.pivot_table(index=['Category', 'Product Name'], values=['Total_price'], aggfunc='Quantity Sold' * 'Sale Price')
+# print(total_sales)
