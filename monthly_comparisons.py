@@ -20,3 +20,8 @@ plt.show()
 df.groupby(['Month']).sum().plot(kind='pie', y='Total Sales', autopct='%1.0f%%',
                                  title='Percentage of Sales per Month')
 plt.show()
+
+
+print("Total Sales by Month in descending order")
+print()
+print(df.groupby('Month')['Total Sales'].max().reset_index().sort_values(['Total Sales'], ascending=False))
