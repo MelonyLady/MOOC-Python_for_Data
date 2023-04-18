@@ -6,8 +6,7 @@ df = pd.read_csv('sales_dataset.csv')
 
 
 df['Total Sales'] = df['Quantity Sold'] * df['Sale Price']
-# product_sales = df.pivot_table(index=['Product Name'], values=['Quantity Sold', 'Sale Price', 'Total Sales'])
-# print(product_sales)
+
 
 
 plt.bar(df['Product Name'], df['Total Sales'])
