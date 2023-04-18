@@ -9,7 +9,7 @@ df['Total Money Spent'] = df['Quantity Sold'] * df['Sale Price']
 
 print("Total Money Spent by Customer in descending order")
 print()
-# THe below function does what the pivot table does, but in a way that isn't as manipulatable
+# THe below function does what the pivot table does
 # df.groupby('Customer Name')['Total Money Spent'].max().reset_index().sort_values(['Total Money Spent'], ascending=False)
 
 # create pivot table that uses 'Total money Spent' and adds them based on customer
