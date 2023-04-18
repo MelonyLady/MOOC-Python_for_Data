@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-df = pd.read_csv('sales_dataset.csv')
+df = pd.read_csv('csv_files/sales_dataset.csv')
 
 
 df['Total Sales'] = df['Quantity Sold'] * df['Sale Price']

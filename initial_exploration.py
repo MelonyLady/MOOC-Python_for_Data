@@ -2,7 +2,7 @@ import csv
 import pandas as pd
 
 
-df = pd.read_csv('sales_dataset.csv')
+df = pd.read_csv('csv_files/sales_dataset.csv')
 
 print(df.to_string())
 
