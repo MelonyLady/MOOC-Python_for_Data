@@ -25,3 +25,5 @@ print()
 
 monthly_sales = df.pivot_table(index=['Month'], values=['Total Sales'], aggfunc='sum')
 print(monthly_sales.sort_values(by=['Total Sales'], ascending=False))
+
+
