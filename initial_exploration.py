@@ -24,7 +24,7 @@ print("*************************************************************************
 
 
 # attempt at pivot table
-# ********************************************************SUPER USEFUL!! ***************************************************************************
+# ********************************************************SUPER USEFUL!! ***********************************************
 
 pivot_avg_sale_price = df.pivot_table(index=['Category'], values=['Sale Price'], aggfunc={'mean', 'median', 'min', 'max'})
 print(pivot_avg_sale_price)
@@ -40,3 +40,6 @@ pivot_monthly_sales_p_cust = df.pivot_table(index=['Month', 'Customer Name'], va
 print(pivot_monthly_sales_p_cust)
 
 print("*********************************************************************************************")
+
+total_sales = df.pivot_table(index=['Category', 'Product Name'], values=['Total_price'], aggfunc='Quantity Sold' * 'Sale Price')
+print(total_sales)
